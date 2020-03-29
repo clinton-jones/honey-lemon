@@ -9,7 +9,7 @@ import Container from '../Container'
 const StyledHero = styled.div`
   background: #000;
   color: #FFF;
-  margin-top: -96px;
+  margin-top: -72px;
 `
 const StyledHeroInner = styled.div`
   align-items: center;
@@ -62,7 +62,7 @@ const Hero = () => (
           <div style={{ display: 'flex' }}>
             <Button>Trade Contracts</Button>
             <div style={{ width: 12 }} />
-            <Button outlined={true}>Learn More</Button>
+            <Button black={true}>Learn More</Button>
           </div>
         </StyledMain>
       </StyledHeroInner>

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import theme from '../../theme'
 
+import Button from '../Button'
 import Container from '../Container'
 import Logo from '../Logo'
 
@@ -16,13 +17,13 @@ const StyledHeader = styled.div`
 const StyledHeaderInner = styled.div`
   align-items: center;
   display: flex;
-  height: 96px;
+  height: 72px;
   justify-content: space-between;
 `
 
 const StyledLink = styled.a`
   color: inherit;
-  margin: 0 12px;
+  margin: 0 24px;
   opacity: 0.8;
   text-decoration: none;
 `
@@ -38,12 +39,17 @@ const Header = ({ darkContent = false }) => (
       <StyledHeaderInner>
         <Logo color={darkContent ? "#000" : "#FFF" }/>
         <StyledNav>
-          <StyledLink href="#">App</StyledLink>
-          <StyledLink href="#">Developers</StyledLink>
+          <StyledLink href="#">About</StyledLink>
+          <StyledLink href="#">Data</StyledLink>
+          <div style={{ width: 24 }} />
+          <Button outlined={true}>Open App</Button>
         </StyledNav>
       </StyledHeaderInner>
     </Container>
   </StyledHeader>
 )
+
+/*
+*/
 
 export default Header

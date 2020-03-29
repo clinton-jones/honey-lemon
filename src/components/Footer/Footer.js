@@ -17,7 +17,6 @@ const StyledFooterWrapper = styled.div`
   padding: 128px 0;
 `
 const StyledFooter = styled.div`
-  align-items: center;
   display: flex;
   justify-content: space-between;
 `

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import theme from '../../theme'
 
+import Button from '../Button'
 import Container from '../Container'
 
 const StyledInterfaceWrapper = styled.div`
@@ -43,6 +44,7 @@ const StyledSpacer = styled.div`
 `
 
 const StyledContentWrapper = styled.div`
+  align-items: center;
   display: flex;
   flex: 1;
 `
@@ -61,17 +63,31 @@ const StyledBrowserWindow = styled.div`
   overflow: hidden;
 `
 const StyledBrowserTopBar = styled.div`
+  align-items: center;
   background: ${theme.palette.grey[50]};
+  display: flex;
   height: 64px;
 `
 const StyledBrowserBody = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: center;
   height: 400px;
 `
 const StyledSearchBar = styled.div`
-  height: 44px;
+  align-items: center;
+  display: flex;
+  padding: 0 24px;
+  font-size: 12px;
+  height: 32px;
   background-color: ${theme.palette.grey[100]};
-  border-radius: 4px;
+  border-radius: 12px;
+  color: ${theme.palette.grey[600]};
+  margin: 0 24px;
+  flex: 1;
 `
+
+const loremIpsum = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
 
 const Interface = () => (
   <StyledInterfaceWrapper>
@@ -80,10 +96,12 @@ const Interface = () => (
         <StyledUIWrapper>
           <StyledBrowserWindow>
             <StyledBrowserTopBar>
-
+              <StyledSearchBar>
+                https://honeylemon.markets
+              </StyledSearchBar>
             </StyledBrowserTopBar>
             <StyledBrowserBody>
-
+              {`<sexy ass UI screenshot here>`}
             </StyledBrowserBody>
           </StyledBrowserWindow>
         </StyledUIWrapper>
@@ -96,6 +114,12 @@ const Interface = () => (
               <span>Start trading now!</span>
             </StyledTitle>
           </StyledTitleWrapper>
+          <div style={{
+            margin: '24px 0',
+          }}>
+            {loremIpsum}
+          </div>
+          <Button black={true}>Launch App</Button>
         </StyledDescription>
 
       </StyledContentWrapper>
