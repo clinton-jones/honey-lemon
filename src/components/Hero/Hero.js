@@ -1,70 +1,82 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import logo from '../../logo.png'
+import lemon from '../../img/lemon.png'
 
 import Button from '../Button'
 import Container from '../Container'
 
 const StyledHero = styled.div`
-  background: #000;
+  background: black;
   color: #FFF;
   margin-top: -72px;
+  padding-bottom: 24px;
+  padding-top: 72px;
+  position: relative;
 `
 const StyledHeroInner = styled.div`
   align-items: center;
   display: flex;
-  height: calc(100vh - 96px);
-  max-height: 1000px;
-  justify-content: center;
+  height: calc(100vh - 212px);
+  max-height: 840px;
   position: relative;
   z-index: 10;
 `
+const StyledTitleWrapper = styled.div`
+  flex: 3;
+`
 
-/*
-  background: linear-gradient(36deg, rgba(246,248,239,1) 0%, rgba(229,230,250,1) 5%, rgba(183,246,252,1) 13%, rgba(246,248,239,1) 19%, rgba(210,218,251,1) 29%, rgba(173,248,236,1) 37%, rgba(214,243,218,1) 46%, rgba(249,196,255,1) 54%, rgba(196,188,255,1) 65%, rgba(196,188,255,1) 78%, rgba(249,196,255,1) 87%, rgba(228,229,242,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-*/
-const StyledMain = styled.div`
-  align-items: center;
+const StyledHandWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  flex: 2;
   justify-content: center;
-  text-align: center;
 `
 
 const StyledTitle = styled.h1`
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 32px 0 0;
-  padding: 0;
-`
-const StyledSubtitle = styled.h3`
-  font-size: 2rem;
-  font-weight: 400;
-  opacity: 0.8;
+  font-size: 3.4rem;
+  line-height: 1;
   margin: 0;
   padding: 0;
 `
+
+const StyledSubtitle = styled.h2`
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 24px 0;
+  opacity: 0.8;
+  padding: 0;
+`
+
+const StyledButtonWrapper = styled.div`
+  align-items: center;
+  display: flex;
+  margin-top: 48px;
+  & > *:nth-child(3) {
+    background: transparent !important;
+    border: 0 !important;
+    color: #FFF !important;
+  }
+`
+
+const titleText = `The best way to trade mining contracts.`
+const subtitleText = `No signups, no KYC, just trading.`
 
 const Hero = () => (
   <StyledHero>
     <Container>
       <StyledHeroInner>
-        <StyledMain>
-          <img src={logo} height={128} style={{ opacity: 1 }} />
-          <StyledTitle>The best way to invest in cloud mining.</StyledTitle>
-          <StyledSubtitle>
-            No signups, no KYC, just contracts.
-          </StyledSubtitle>
-          <div style={{ height: 64 }} />
-          <div style={{ display: 'flex' }}>
-            <Button>Trade Contracts</Button>
-            <div style={{ width: 12 }} />
+        <StyledTitleWrapper>
+          <StyledTitle>{titleText}</StyledTitle>
+          <StyledSubtitle>{subtitleText}</StyledSubtitle>
+          <StyledButtonWrapper>
+            <Button>Trade Now</Button>
+            <div style={{ width: 4 }} />
             <Button black={true}>Learn More</Button>
-          </div>
-        </StyledMain>
+          </StyledButtonWrapper>
+        </StyledTitleWrapper>
+        <StyledHandWrapper>
+          <img src={lemon} width="75%" style={{ filter: `drop-shadow(-12px 15px 128px #ffe50066)` }}/>
+        </StyledHandWrapper>
       </StyledHeroInner>
     </Container>
   </StyledHero>

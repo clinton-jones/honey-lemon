@@ -8,10 +8,8 @@ import Container from '../Container'
 import Logo from '../Logo'
 
 const StyledHeader = styled.div`
-  background: #000;
-  position: sticky;
   color: ${props => props.darkContent ? theme.palette.grey[1000] : "#FFF"};
-  top: 0;
+  position: relative;
   z-index: 2;
 `
 const StyledHeaderInner = styled.div`
@@ -35,7 +33,7 @@ const StyledNav = styled.nav`
 
 const Header = ({ darkContent = false }) => (
   <StyledHeader darkContent={darkContent}>
-    <Container full>
+    <Container>
       <StyledHeaderInner>
         <Logo color={darkContent ? "#000" : "#FFF" }/>
         <StyledNav>
