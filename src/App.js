@@ -5,17 +5,10 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Interface from './components/Interface'
 import Intro from './components/Intro'
+import Dashboard from './components/Dashboard/Dashboard'
 
 function App() {
-  return (
-    <>
-      <Header />
-      <Hero />
-      <Intro />
-      <Interface />
-      <Footer />
-    </>
-  )
+  return <Dashboard />
 }
 
 export default App
